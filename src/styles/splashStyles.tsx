@@ -10,5 +10,5 @@ export const splashStyles = StyleSheet.create({
     text: {
         position: "absolute",
         bottom: 40,
-    }
+    },
 })

@@ -17,20 +17,24 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.eugen.pickmeapp",
       "config": {
-                "googleMapsApiKey": "AIzaSyDa3jo-JD2_PycxFsxbHW4Lwt3URqm3rak"
-            }
+        "googleMapsApiKey": "AIzaSyDa3jo-JD2_PycxFsxbHW4Lwt3URqm3rak"
+      }
     },
     "android": {
       "config": {
-                "googleMaps": {
-                    "apiKey": "AIzaSyDa3jo-JD2_PycxFsxbHW4Lwt3URqm3rak"
-                }
-            },
+        "googleMaps": {
+          "apiKey": "AIzaSyDa3jo-JD2_PycxFsxbHW4Lwt3URqm3rak"
+        }
+      },
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.eugen.pickmeapp"
+      "package": "com.eugen.pickmeapp",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -44,10 +48,19 @@
         {
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
         }
-      ]
+      ],
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "b3e47041-75c0-4092-971d-617080f5451e"
+      }
     }
   }
 }
